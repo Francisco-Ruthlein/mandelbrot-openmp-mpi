@@ -2,6 +2,7 @@
 #  Mandelbrot en paralelo: secuencial, OpenMP y MPI
 #
 #    make          compila las tres versiones en bin/
+#    make test     verifica que las tres den exactamente el mismo resultado
 #    make clean    borra lo compilado y las imágenes generadas
 # =============================================================================
 CXX      = g++
@@ -27,7 +28,10 @@ $(BIN)/mandelbrot_mpi: src/mandelbrot_mpi.cpp $(COMUN)
 	@mkdir -p $(BIN)
 	$(MPICXX) $(CXXFLAGS) $< -o $@
 
+test: all
+	bash scripts/verificar.sh
+
 clean:
 	rm -rf $(BIN) *.ppm
 
-.PHONY: all clean
+.PHONY: all test clean
