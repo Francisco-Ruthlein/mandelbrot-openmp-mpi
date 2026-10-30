@@ -11,7 +11,7 @@ Objetivo: dibujar el conjunto de Mandelbrot de tres formas (secuencial, con Open
 
 - [x] Estructura inicial del proyecto
 - [x] Cálculo común del fractal (`src/mandelbrot_comun.h`)
-- [ ] Versión secuencial de referencia
+- [x] Versión secuencial de referencia
 - [ ] Versión OpenMP (hilos, memoria compartida)
 - [ ] Versión MPI (procesos, memoria distribuida)
 - [ ] Verificación automática (`make test`)
