@@ -1,0 +1,10 @@
+# Ejecutables compilados (se generan con make)
+bin/
+
+# Imágenes que generan los programas al ejecutarse
+*.ppm
+
+# Archivos temporales de editores y del sistema
+*.swp
+*~
+.DS_Store
