@@ -1,0 +1,25 @@
+# Cada vez que se sube un cambio (push) o se abre un pull request, GitHub
+# compila las tres versiones en una máquina Ubuntu y corre la verificación.
+name: Compilar y verificar
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  compilar-y-verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v7
+
+      - name: Instalar g++, make y Open MPI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++ make openmpi-bin libopenmpi-dev
+
+      - name: Compilar las tres versiones
+        run: make
+
+      - name: Verificar que las tres versiones den lo mismo
+        run: make test

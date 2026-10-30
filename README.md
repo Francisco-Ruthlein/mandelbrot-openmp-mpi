@@ -16,7 +16,7 @@ Objetivo: dibujar el conjunto de Mandelbrot de tres formas (secuencial, con Open
 - [x] Versión MPI (procesos, memoria distribuida)
 - [x] Verificación automática (`make test`)
 - [x] Medición de tiempos (`make bench`)
-- [ ] Integración continua (GitHub Actions) y Codespaces
+- [x] Integración continua (GitHub Actions) y Codespaces
 - [ ] Documentación completa
 
 Autor: Francisco Martín Ruthlein
