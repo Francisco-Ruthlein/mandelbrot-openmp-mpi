@@ -3,6 +3,7 @@
 #
 #    make          compila las tres versiones en bin/
 #    make test     verifica que las tres den exactamente el mismo resultado
+#    make bench    mide tiempos y speedup con la imagen completa
 #    make clean    borra lo compilado y las imágenes generadas
 # =============================================================================
 CXX      = g++
@@ -31,7 +32,10 @@ $(BIN)/mandelbrot_mpi: src/mandelbrot_mpi.cpp $(COMUN)
 test: all
 	bash scripts/verificar.sh
 
+bench: all
+	bash scripts/medir.sh
+
 clean:
 	rm -rf $(BIN) *.ppm
 
-.PHONY: all test clean
+.PHONY: all test bench clean
