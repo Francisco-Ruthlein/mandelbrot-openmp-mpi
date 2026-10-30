@@ -1,6 +1,6 @@
 # Mandelbrot en paralelo: OpenMP y MPI
 
-Trabajo práctico de **Paradigmas de Programación** (Analista de Sistemas de Computación, FCEQyN – UNaM, 2026).
+Trabajo práctico de **Paradigmas de Programación** (Licenciatura en Sistemas de Informacion, FCEQyN – UNaM, 2026).
 
 Objetivo: dibujar el conjunto de Mandelbrot de tres formas (secuencial, con OpenMP y con MPI), comprobar que las tres den exactamente el mismo resultado y medir cuánto se acelera.
 
